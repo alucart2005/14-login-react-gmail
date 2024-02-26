@@ -28,11 +28,11 @@ export const AuthContextProvider = ({ children }) => {
     };
   }, []);
   return (
-    <AuthContext.provider value={{googleSignIn, logOut, user}}>
+    <AuthContext.Provider value={{ googleSignIn, logOut, user }}>
       {children}
-    </AuthContext.provider>
-  )
+    </AuthContext.Provider>
+  );
 };
-export const UserOut = ()=>{
-  return useContext(AuthContext)
-}
+export const UserAuth = () => {
+  return useContext(AuthContext);
+};
